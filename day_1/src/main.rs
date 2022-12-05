@@ -16,14 +16,14 @@ fn challenge1() {
 }
 
 fn challenge2() {
-    let debug = true;
-    let file_path = "resource/data.txt";
+    let debug = false;
+    let file_path = "resource/input.txt";
     if debug {println!("In file {}", file_path);}
     let data = read_text_at_once(file_path);
     let answer = find_maximum2(data, debug);
     println!("Top 3 calorie carrying gnomes = {}, {}, {}", answer[0], answer[1], answer[2]);
     let sum = answer[0] + answer[1] + answer[2];
-    if debug {println!("Total of top = {}", sum)}
+    println!("Total of top = {}", sum)
 }
 
 fn find_maximum(data:String, debug:bool) -> i32 {
